@@ -11,16 +11,6 @@
     --light-bg-colour: #EDD; 
     --off-white: #FFF9F9; 
 }
-/* 
-@font-face {
-    font-family: "Cutive Mono";
-    src: url() format('truetype');
-} 
-
-@font-face {
-    font-family: "Major Mono Display";
-    src: url() format('truetype');
-} */
 
 body {
     background: no-repeat center/cover url('images/bg-books.jpeg'); 
