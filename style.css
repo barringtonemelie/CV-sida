@@ -11,19 +11,19 @@
     --light-bg-colour: #EDD; 
     --off-white: #FFF9F9; 
 }
-
+/* 
 @font-face {
     font-family: "Cutive Mono";
-    src: url(../fonts/Cutive_Mono/CutiveMono-Regular.ttf) format('truetype');
+    src: url() format('truetype');
 } 
 
 @font-face {
     font-family: "Major Mono Display";
-    src: url(../fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf) format('truetype');
-}
+    src: url() format('truetype');
+} */
 
 body {
-    background: no-repeat center/cover url('/images/bg-books.jpeg'); 
+    background: no-repeat center/cover url('images/bg-books.jpeg'); 
 }
 
 /* Mobile styling */ 
