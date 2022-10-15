@@ -40,7 +40,7 @@ header>h1 {
 header>h2 {
     color: var(--off-white); 
     font-family: "Major Mono Display";
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
     text-align: center;
     padding: 1rem; 
 }
@@ -115,7 +115,7 @@ article {
     width: 100vw; 
     min-height: 40rem; 
     margin: 0 auto; 
-    display: flex;
+    display: flex;  
     flex-wrap: wrap; /* So that it wraps for a mobile user*/
     color: var(--text-color); 
 }
@@ -127,6 +127,16 @@ p {
 
 /* Index page styling */
 
+.home-page {
+    justify-content: center; 
+    align-items: center; 
+}
+
+.home-page>h3, .profile>h3 {
+    font-family: "Major Mono Display";
+    padding: 1.5rem; 
+}
+
 .profile {
     display: flex; 
     justify-content: center;
@@ -134,11 +144,6 @@ p {
     width: 100%; 
     flex-direction: column;
     border-left: 2px dotted var(--off-white);
-}
-
-.profile>h3 {
-    font-family: "Major Mono Display";
-    padding: 1.5rem; 
 }
 
 .about-list {
@@ -174,6 +179,21 @@ p {
 }
 
 /* About me page styling */
+
+.about-page {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.about-page>h3 {
+    text-align: center;
+    width: 100%; 
+    font-family: "Major Mono Display";
+    padding: 1.5rem;
+}
 
 .main-about {
     width: min(95%, 600px);
@@ -308,7 +328,15 @@ footer>p {
     .home-page {
         display: grid; 
         grid-template-columns: 2fr 1fr;
-        grid-template-areas: "left-column right-column"
+        grid-template-rows: 1fr 7fr; 
+        grid-template-areas: 
+        "header header"
+        "left-column right-column";
+    }
+    .home-page>h3 {
+        grid-area: header; 
+        text-align: center;
+        border-bottom: 2px dotted var(--off-white);
     }
     .profile {
         grid-area: right-column; 
