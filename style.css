@@ -111,7 +111,7 @@ header>h2 {
 }
 
 .list-menu>li>a:hover {
-    background-color: var(--dark-bg-colour);
+    background-color: #ba9b9b;
     color: white;
 }
 
@@ -308,7 +308,7 @@ footer>p {
 
 /* Desktop styling */
 
-@media screen and (min-width: 890px) {
+@media screen and (min-width: 935px) {
     /* General styling */
     header {
         /* Using the min function to make the webpage not stretch too far on wider screens */
@@ -322,12 +322,20 @@ footer>p {
         display: none; 
     }
     .list-menu {
-        display: flex; 
+        display: grid; 
+        grid-template-columns: repeat(5, 1fr);
+        /* display: flex; 
         justify-content: space-evenly;
-        align-items: center;
+        align-items: center; */
+        width: 100%; 
+    }
+    .list-menu>li {
         width: 100%; 
     }
     .list-menu>li>a {
+        width: 100%; 
+        font-size: 1rem;
+        text-align: center;
         padding-top: 2rem; 
         padding-bottom: 2rem; 
     }
