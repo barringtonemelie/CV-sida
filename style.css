@@ -120,11 +120,6 @@ article {
     color: var(--text-color); 
 }
 
-h3, h4 {
-    font-family: "Cutive Mono";
-    padding: 1.5rem; 
-}
-
 p {
     padding: 1.5rem; 
     font-family: "Cutive Mono";
@@ -141,6 +136,11 @@ p {
     border-left: 2px dotted var(--off-white);
 }
 
+.profile>h3 {
+    font-family: "Major Mono Display";
+    padding: 1.5rem; 
+}
+
 .about-list {
     list-style: circle;
     padding: 1rem; 
@@ -152,18 +152,11 @@ p {
     font-family: "Cutive Mono"; 
 }
 
-h2 {
-    font-family: "Major Mono Display";
+.main-content>h3 {
+    font-family: "Major Mono Display";  
+    padding: 1.5rem;
 }
 
-.main-about {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-direction: column;
-    width: 50%;
-    margin: 0 auto;
-}
 
 /* The wrapper is for making the image circular even though it's not square (otherwise it turns elliptical) */
 .img-wrapper {
@@ -187,11 +180,47 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    width: 90%; 
+    margin: 0 auto; 
+}
+
+.main-about>h3 {
+    font-family: "Major Mono Display";
+    padding: 1.5rem;
 }
 
 
 /* Portfolio page styling */
 
+.gallery-container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(6, 100px); 
+    grid-gap: 1rem; 
+    grid-auto-flow: dense; 
+}
+
+.gallery-card {
+    border: 1px solid blue; 
+    padding: 1rem;
+}
+
+.gallery-card>h3 {
+    font-family: "Cutive Mono";
+    position: absolute; 
+    z-index: 2; 
+}
+
+.gallery-card:nth-child(3n) {
+    grid-column: span 2; 
+    grid-row: span 2; 
+}
+
+.gallery-card:nth-child(6n) {
+    grid-column: span 3; 
+    grid-row: span 3; 
+}
 
 
 /* Experience and education page styling */
@@ -216,6 +245,11 @@ h2 {
 
 .cards>h3 {
     border-bottom: 2px dotted var(--text-color);
+}
+
+.cards>h3, .cards>h4 {
+    font-family: "Cutive Mono";
+    padding: 1.5rem; 
 }
 
 
@@ -279,7 +313,21 @@ footer>p {
     }
     /* About me page styling */
 
+    .main-about {
+        width: 75%; 
+    }
+
     /* Portfolio page styling */
+
+    .gallery-card:nth-child(4n) {
+        grid-column: span 2; 
+        grid-row: span 2; 
+    }
+    
+    .gallery-card:nth-child(8n) {
+        grid-column: span 3; 
+        grid-row: span 3; 
+    }
 
     /* Experience page styling */
 
