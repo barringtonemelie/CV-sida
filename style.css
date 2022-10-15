@@ -224,7 +224,7 @@ p {
 /* Portfolio page styling */
 
 .gallery-container {
-    padding: 0.5rem; 
+    padding: 1rem; 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: repeat(6, 100px); 
