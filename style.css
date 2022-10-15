@@ -202,24 +202,28 @@ p {
 }
 
 .gallery-card {
-    border: 1px solid blue; 
-    padding: 1rem;
+    overflow: hidden;
 }
 
 .gallery-card>h3 {
     font-family: "Cutive Mono";
+    font-size: 0.8rem;
+    max-width: 150px; 
     position: absolute; 
     z-index: 2; 
+    padding: 0.5rem; 
+    background-color: var(--off-white);
 }
 
-.gallery-card:nth-child(3n) {
+.gallery-card:nth-child(4n) {
     grid-column: span 2; 
     grid-row: span 2; 
 }
 
-.gallery-card:nth-child(6n) {
-    grid-column: span 3; 
-    grid-row: span 3; 
+.gallery-card>img {
+    object-fit: cover;
+    width: 100%; 
+    height: auto; 
 }
 
 
@@ -292,6 +296,10 @@ footer>p {
         align-items: center;
         width: 100%; 
     }
+    .list-menu>li>a {
+        padding-top: 2rem; 
+        padding-bottom: 2rem; 
+    }
     article {
         width: min(90vw, 1000px); 
     }
@@ -318,6 +326,15 @@ footer>p {
     }
 
     /* Portfolio page styling */
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-rows: repeat(6, 200px);
+    }
+
+    .gallery-card>h3 {
+        font-size: 1.2rem;
+    }
 
     .gallery-card:nth-child(4n) {
         grid-column: span 2; 
