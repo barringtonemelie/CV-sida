@@ -441,6 +441,14 @@ footer>p {
         background-color: #561F1F;
         color: #d67a7a;
     }
+    @media screen and (min-width: 935px) {
+        .home-page>h3 {
+            border-bottom: 2px dotted #d67a7a;
+        }
+        .index-profile {
+            border-left: 2px dotted #d67a7a;
+        }
+    }
     .gallery-card>h3 {
         background-color: #561F1F;
         color: #d67a7a;
