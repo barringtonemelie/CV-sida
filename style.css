@@ -344,6 +344,14 @@ footer>p {
     }
     
     /* Index page styling */
+    @media (prefers-color-scheme: dark) {
+        .home-page>h3 {
+            border-bottom: 2px dotted #d67a7a;
+        }
+        .index-profile {
+            border-left: 2px dotted #d67a7a;
+        }
+    }
     .home-page {
         display: grid; 
         grid-template-columns: 2fr 1fr;
@@ -428,12 +436,6 @@ footer>p {
         padding-left: 1.5rem; 
         font-family: "Cutive Mono";
         font-size: 1.5rem;
-    }
-    .home-page>h3 {
-        border-bottom: 2px dotted #d67a7a;
-    }
-    .index-profile {
-        border-left: 2px dotted #d67a7a;
     }
     article {
         background-color: #561F1F;
