@@ -10,13 +10,14 @@
     --medium-bg-colour: #c9adad;
     --light-bg-colour: #EDD; 
     --off-white: #FFF9F9; 
+    --text-color: #4e3b3b;
 }
 
 body {
     background: no-repeat center/cover url('images/bg-books.jpeg'); 
 }
 
-/* Mobile styling */ 
+/* Mobile styling - general rules */ 
 
 header {
     background-color: var(--dark-bg-colour);
@@ -25,13 +26,23 @@ header {
     display: flex; 
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 header>h1 {
     color: var(--off-white); 
-    grid-area: header; 
     margin: 1.5rem auto; 
+    text-align: center;
     font-family: "Major Mono Display";
+    font-size: 2.5rem; 
+}
+
+header>h2 {
+    color: var(--off-white); 
+    font-family: "Major Mono Display";
+    font-size: 1.5 rem;
+    text-align: center;
+    padding: 1rem; 
 }
 
 /* Making a hamburger menu for mobile version */
@@ -40,6 +51,7 @@ header>h1 {
     background-color: var(--medium-bg-colour);
     min-height: 2rem; 
     max-height: 16rem;
+    font-size: 1rem;
     width: 100vw; 
     margin: 0 auto; 
     display: flex; 
@@ -105,6 +117,12 @@ article {
     margin: 0 auto; 
     display: flex;
     flex-wrap: wrap; /* So that it wraps for a mobile user*/
+    color: var(--text-color); 
+}
+
+h2, h3 {
+    font-family: "Cutive Mono";
+    padding: 1.5rem; 
 }
 
 p {
@@ -112,13 +130,15 @@ p {
     font-family: "Cutive Mono";
 }
 
-/* index page */
+/* Index page styling */
 
 .profile {
     display: flex; 
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    width: 100%; 
     flex-direction: column;
+    border-left: 2px dotted var(--off-white);
 }
 
 .about-list {
@@ -136,6 +156,15 @@ h2 {
     font-family: "Major Mono Display";
 }
 
+.main-about {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
 /* The wrapper is for making the image circular even though it's not square (otherwise it turns elliptical) */
 .img-wrapper {
     width: 15rem; 
@@ -151,13 +180,44 @@ h2 {
     max-width: 100%;
 }
 
-/* About me page */
+/* About me page styling */
 
-/* Portfolio page */
+.main-about {
+    width: min(95%, 600px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* Experience page */
 
-/* Education page */
+/* Portfolio page styling */
+
+/* Experience and education page styling */
+
+.cards-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--off-white);
+    width: min(95%, 600px); 
+    margin: 1rem 0; 
+    box-shadow: -5px 5px 20px var(--dark-bg-colour);
+}
+
+.cards>h3 {
+    border-bottom: 2px dotted var(--text-color);
+}
+
+
+
 
 footer {
     background-color: var(--dark-bg-colour);
@@ -177,11 +237,12 @@ footer>p {
 
 /* Desktop styling */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 890px) {
+    /* General styling */
     header {
         /* Using the min function to make the webpage not stretch too far on wider screens */
         width: min(90vw, 1000px); 
-        background-color: var(--medium-bg-colour);  
+        background-color: var(--dark-bg-colour);  
     }
     .ham-nav {
         width: min(90vw, 1000px); 
@@ -197,6 +258,10 @@ footer>p {
     }
     article {
         width: min(90vw, 1000px); 
+    }
+    
+    /* Index page styling */
+    .home-page {
         display: grid; 
         grid-template-columns: 2fr 1fr;
         grid-template-areas: "left-column right-column"
@@ -204,11 +269,19 @@ footer>p {
     .profile {
         grid-area: right-column; 
         padding: 1rem; 
+        justify-content: flex-start;
     }
     .main-content {
         grid-area: left-column; 
         padding: 1rem; 
     }
+    /* About me page styling */
+
+    /* Portfolio page styling */
+
+    /* Experience page styling */
+
+    /* Education page styling */
     footer {
         width: min(90vw, 1000px); 
     }
