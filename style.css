@@ -120,7 +120,7 @@ article {
     color: var(--text-color); 
 }
 
-h2, h3 {
+h3, h4 {
     font-family: "Cutive Mono";
     padding: 1.5rem; 
 }
@@ -191,6 +191,8 @@ h2 {
 
 
 /* Portfolio page styling */
+
+
 
 /* Experience and education page styling */
 
