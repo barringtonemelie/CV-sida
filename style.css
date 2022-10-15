@@ -108,7 +108,8 @@ header>h2 {
     font-family: "Major Mono Display";
     color: var(--off-white);
     padding: 1rem 2rem 1rem 2rem; 
-    transition: background-color 1s, color 1s; 
+    transition: background-color 0.5s, color 0.5s; 
+    width: 10rem; 
 }
 
 .list-menu>li>a:hover {
@@ -421,7 +422,7 @@ footer>p {
     }
     .list-menu>li>a {
         color: #d67a7a;
-        transition: background-color 1s, color 1s; 
+        transition: background-color 0.5s, color 0.5s; 
     }
     .list-menu>li>a:hover {
         background-color: #3d0707;
