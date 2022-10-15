@@ -108,6 +108,7 @@ header>h2 {
     font-family: "Major Mono Display";
     color: var(--off-white);
     padding: 1rem 2rem 1rem 2rem; 
+    transition: background-color 1s, color 1s; 
 }
 
 .list-menu>li>a:hover {
@@ -153,7 +154,6 @@ p {
     align-items: center;
     width: 100%; 
     flex-direction: column;
-    border-left: 2px dotted var(--off-white);
 }
 
 .about-list {
@@ -357,10 +357,11 @@ footer>p {
         text-align: center;
         border-bottom: 2px dotted var(--off-white);
     }
-    .profile {
+    .index-profile {
         grid-area: right-column; 
         padding: 1rem; 
         justify-content: flex-start;
+        border-left: 2px dotted var(--off-white);
     }
     .main-content {
         grid-area: left-column; 
@@ -393,10 +394,72 @@ footer>p {
         grid-row: span 3; 
     }
 
-    /* Experience page styling */
-
-    /* Education page styling */
     footer {
         width: min(90vw, 1000px); 
+    }
+}
+
+/* Dark color scheme */
+
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: #100000;
+    }
+    header>h1, header>h2 {
+        color: #d44848;
+    }
+    .ham-nav {
+        background-color: #240303;
+    }
+    .list-menu>li>a {
+        color: #d67a7a;
+        transition: background-color 1s, color 1s; 
+    }
+    .list-menu>li>a:hover {
+        background-color: #3d0707;
+        color: #e06464;
+    }
+    #nav-active {
+        background-color: #561F1F;
+        color: #e48787; 
+    }
+    .main-content:before {
+        content: "You're currently using dark mode."; 
+        padding-left: 1.5rem; 
+        font-family: "Cutive Mono";
+        font-size: 1.5rem;
+    }
+    .home-page>h3 {
+        border-bottom: 2px dotted #d67a7a;
+    }
+    .index-profile {
+        border-left: 2px dotted #d67a7a;
+    }
+    article {
+        background-color: #561F1F;
+        color: #d67a7a;
+    }
+    .gallery-card>h3 {
+        background-color: #561F1F;
+        color: #d67a7a;
+    }
+    .cards>h3 {
+        border-bottom: 2px dotted #d67a7a;
+    }
+    .cards {
+        background-color: #6D3737;
+        box-shadow: -5px 5px 20px #240303;
+    }
+    footer {
+        background-color: #100000;
+        color: #6D3737;
+    }
+}
+@media (prefers-color-scheme: light) {
+    .main-content:before {
+        content: "You're currently using light mode."; 
+        padding-left: 1.5rem; 
+        font-size: 1.5rem;
+        font-family: "Cutive Mono";
     }
 }
